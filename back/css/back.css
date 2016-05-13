@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	margin: 0 auto;
+	padding: .5rem;
+	width: 1000px;
+	height: 2rem;
+	background-color: black;
+}
+.manage{
+	display: inline-block;
+	width: 16%;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+}
+.manage:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+}
+.container{
+	margin: .5rem auto;
+	padding: .5rem;
+	width: 1000px;
+	min-height: 100px;
+	background-color: #f1f1f1;
+}
+.hidden{
+	display: none;
+}
+.myButton{
+	padding: 0 .5rem;
+}
+table{
+	margin-top: .5rem;
+	width: 100%;
+	text-align: center;
+}
+td{
+	padding: .5rem 0;
+}
+.selected{
+	background-color: white;
+	color: black;
+}
+.teamLogo{
+	width: 2rem;
+	height: 2rem;
+	vertical-align: top;
+}

@@ -1,0 +1,205 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	position: relative;
+	width: 100%;
+	height: 3rem;
+	background-color: #0755e4;
+}
+.ired{
+	width: 4rem;
+	height: 3rem;
+}
+.NBALogo{
+	position: absolute;
+	left: .75rem;
+	top: .25rem;
+	height: 2.5rem;
+}
+.nav{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 6rem;
+	height: 3rem;
+}
+.dataNav{
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+}
+.dataNav img
+{
+	padding: .2rem .8rem 0;
+	width: 1.4rem;
+	height: 1.6rem;
+	vertical-align: top;
+}
+.dataNav p{
+	margin-top: .2rem;
+	width: 3rem;
+	height: .8rem;
+	line-height: .8rem;
+	text-align: center;
+	font-size: .8rem;
+	color: white;
+	font-weight: bold;
+}
+.hidden{
+	display: none;
+}
+.hiddenNav{
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	padding: .5rem 0;
+	width: 100%;
+	height: 1rem;
+	background-color: #1d2129;
+	color: white;
+	z-index: 999;
+}
+.bottomArrow{
+	position: absolute;
+	top: -9px;
+	right: 1.2rem;
+	border-style: solid;
+	border-width: 5px;
+	border-top-color: rgba(0,0,0,0);
+	border-right-color: rgba(0,0,0,0);
+	border-left-color: rgba(0,0,0,0);
+	border-bottom-color: #1d2129;
+}
+.hiddenNav a{
+	display: inline-block;
+	margin-left: -1px;
+	width: 25%;
+	text-align: center;
+	color: #9b9ea4;
+}
+.borderRight1{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: rgba(155,158,164,.4);
+}
+.scheduleSimpleBox{
+	position: relative;
+	padding: .2rem 0;
+	width: 100%;
+	height:6rem;
+	background-color: #1d2129;
+}
+.scheduleUl{
+	display: block;
+	width: 100%;
+	height: 6rem;
+	list-style: none;
+	white-space:nowrap;
+	overflow: scroll;
+}
+.scheduleUl li{
+	display: inline-block;
+	margin-right: .2rem;
+	width: 6rem;
+	height: 6rem;
+	vertical-align: top;
+
+}
+.scheduleUl li a{
+	position: relative;
+	display: inline-block;
+	height: 6rem;
+	width: 6rem;
+	background-color: #282f39;
+}
+.status{
+	position: absolute;
+	right: 0;
+	padding: 0 .5rem;
+	background-color: #373e4a;
+	color: #9b9ea4;
+	font-size: .8rem;
+}
+.guestLogo{
+	position: absolute;
+	top: 1.1rem;
+	left: .3rem;
+	width: 2rem;
+	height: 2rem;
+}
+.homeLogo{
+	position: absolute;
+	top: 3.7rem;
+	left: .3rem;
+	width: 2rem;
+	height: 2rem;
+}
+.guestName{
+	position: absolute;
+	top: 1rem;
+	left: 2.6rem;
+	font-size: .8rem;
+	color: #9b9ea4;
+}
+.guestScore{
+	position: absolute;
+	top: 2rem;
+	left: 2.6rem;
+	font-size: 1.2rem;
+	color: #9b9ea4;
+}
+.homeName{
+	position: absolute;
+	top: 3.6rem;
+	left: 2.6rem;
+	font-size: .8rem;
+	color: #9b9ea4;
+}
+.homeScore{
+	position: absolute;
+	top: 4.6rem;
+	left: 2.6rem;
+	font-size: 1.2rem;
+	color: #9b9ea4;
+}
+hr{
+	position: absolute;
+	top: 3.4rem;
+	left: .3rem;
+	width: 5.4rem;
+	border-top-width: 0;
+	border-color: #222831;
+}
+.borderBottom{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #efefef;
+}
+.newsContainer{
+	position: relative;
+	background-color: white;
+}
+.newsTitle{
+	margin: .5rem .5rem 0;
+	padding: 0 0 .5rem;
+	color: #2b2b2b;
+}
+.newBox{
+	margin: .5rem .5rem 0;
+	padding: 0 0 .5rem;
+	height: 4rem;
+}
+.newBox img{
+	display: inline-block;
+	width: 30%;
+	height: 4rem;
+}
+.newBox p{
+	display: inline-block;
+	margin-left: 2%;
+	width: 68%;
+	height: 4rem;
+	vertical-align: top;
+}

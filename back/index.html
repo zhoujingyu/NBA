@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>NBA后台数据管理</title>
+	<link rel="stylesheet" type="text/css" href="css/back.css" />
+	<script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/back.js"></script>
+	<script type="text/javascript" src="js/scheduleManage.js"></script>
+	<script type="text/javascript" src="js/liverManage.js"></script>
+	<script type="text/javascript" src="js/teamManage.js"></script>
+	<script type="text/javascript" src="js/playerManage.js"></script>
+	<script type="text/javascript" src="js/dataManage.js"></script>
+	<script type="text/javascript" src="js/userManage.js"></script>
+</head>
+<body>
+	<div class="header">
+		<span class="manage selected" onclick="showSchedule(this)">赛程管理</span><!--
+		--><span class="manage" onclick="showLiver(this)">直播员管理</span><!--
+		--><span class="manage" onclick="showTeam(this)">球队管理</span><!--
+		--><span class="manage" onclick="showPlayer(this)">球员管理</span><!--
+		--><span class="manage" onclick="showData(this)">数据管理</span><!--
+		--><span class="manage" onclick="showUser(this)">用户管理</span>
+	</div>
+	<div class="container" id="container">
+		<div class="myCtrl scheduleCtrl" id="scheduleCtrl">
+			<p>
+				<input type="date" id="scheduleDate" onchange="getSchedule(this.value);" />
+				<button type="button" class="myButton" id="scheduleDateQuery" onclick="scheduleDateQuery();">查询</button>
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" id="lastDay" onclick="lastDay();"><</button>
+				<span id="today">0000-00-00</span>
+				<button type="button" class="myButton" id="nextDay" onclick="nextDay();">></button>
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" id="backToday" onclick="backToday();">返回今天</button>
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" id="addGame" onclick="addSchedule();">添加比赛</button>
+			</p>
+			<table class="scheduleTable" id="scheduleTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>客队</td>
+					<td>主队</td>
+					<td>日期</td>
+					<td>时间</td>
+					<td>直播员</td>
+					<td>操作一</td>
+					<td>操作二</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myCtrl liverCtrl hidden" id="liverCtrl">
+			<p>
+				<button type="button" class="myButton" id="addGame" onclick="addLiver();">添加直播员</button>
+			</p>
+			<table class="liverTable" id="liverTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>名称</td>
+					<td>密码</td>
+					<td>邮箱</td>
+					<td>操作一</td>
+					<td>操作二</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myCtrl teamCtrl hidden" id="teamCtrl">
+			<p>
+				<button type="button" class="myButton" onclick="getTeam('east')">东部</button>
+				&nbsp;
+				<button type="button" class="myButton" onclick="getTeam('west')">西部</button>
+				&nbsp;
+				<select id="divisionSelect" onchange="getTeam(this.value)">
+					<option></option>
+					<option value="西南区">西南区</option>
+					<option value="西北区">西北区</option>
+					<option value="太平洋区">太平洋区</option>
+					<option value="东南区">东南区</option>
+					<option value="中区">中区</option>
+					<option value="大西洋区">大西洋区</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" onclick="addTeam()">添加球队</button>
+			</p>
+			<table class="teamTable" id="teamTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>全称</td>
+					<td>简称</td>
+					<td>东西部</td>
+					<td>分区</td>
+					<td>所在城市</td>
+					<td>球馆</td>
+					<td>球队Logo</td>
+					<td>操作一</td>
+					<td>操作二</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myCtrl playerCtrl hidden" id="playerCtrl">
+			<p>
+				
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" onclick="addTeam()">添加球队</button>
+			</p>
+			<table class="playerTable" id="playerTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>全称</td>
+					
+					<td>操作一</td>
+					<td>操作二</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myCtrl dataCtrl hidden" id="dataCtrl"></div>
+		<div class="myCtrl userCtrl hidden" id="userCtrl"></div>
+	</div>
+</body>
+</html>
