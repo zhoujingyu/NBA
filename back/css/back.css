@@ -53,3 +53,13 @@ td{
 	height: 2rem;
 	vertical-align: top;
 }
+.dataButton{
+}
+.dataIpunt{
+	border: none;
+	width: 30px;
+	text-align: center;
+}
+.userInput{
+	width: 80px;
+}

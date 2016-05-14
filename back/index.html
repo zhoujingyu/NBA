@@ -98,21 +98,71 @@
 		</div>
 		<div class="myCtrl playerCtrl hidden" id="playerCtrl">
 			<p>
-				
+				<label>东部：</label>
+				<select id="playerEastSelect" onchange="getPlayer(this.value);"></select>
+				&nbsp;
+				<label>西部：</label>
+				<select id="playerWestSelect" onchange="getPlayer(this.value);"></select>
 				&nbsp;&nbsp;&nbsp;
-				<button type="button" class="myButton" onclick="addTeam()">添加球队</button>
+				<button type="button" class="myButton" onclick="addPlayer()">添加球员</button>
 			</p>
 			<table class="playerTable" id="playerTable" border="1" cellpadding="0" cellspacing="0">
 				<tr class="tableHeader">
-					<td>全称</td>
-					
+					<td>名称</td>
+					<td>球队</td>
+					<td>位置</td>
 					<td>操作一</td>
 					<td>操作二</td>
 				</tr>
 			</table>
 		</div>
-		<div class="myCtrl dataCtrl hidden" id="dataCtrl"></div>
-		<div class="myCtrl userCtrl hidden" id="userCtrl"></div>
+		<div class="myCtrl dataCtrl hidden" id="dataCtrl">
+			<p>
+				<label>东部：</label>
+				<select id="dataEastSelect" onchange="getData(this.value);"></select>
+				&nbsp;
+				<label>西部：</label>
+				<select id="dataWestSelect" onchange="getData(this.value);"></select>
+			</p>
+			<table class="dataTable" id="dataTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>名称</td>
+					<td>得分</td>
+					<td>篮板</td>
+					<td>助攻</td>
+					<td>抢断</td>
+					<td>盖帽</td>
+					<td>失误</td>
+					<td>3分</td>
+					<td>犯规</td>
+					<td>罚球</td>
+					<td>场次</td>
+					<td>球队</td>
+				</tr>
+			</table>
+		</div>
+		<div class="myCtrl userCtrl hidden" id="userCtrl">
+			<p>
+				<button type="button" class="myButton" onclick="addUser()">添加用户</button>
+				&nbsp;&nbsp;&nbsp;
+				<button type="button" class="myButton" onclick="lastPage()">上一页</button>
+				第<span id="currentPage"></span>页，共<span id="countPage"></span>页
+				<button type="button" class="myButton" onclick="nextPage()">下一页</button>
+			</p>
+			<table class="userTable" id="userTable" border="1" cellpadding="0" cellspacing="0">
+				<tr class="tableHeader">
+					<td>用户名</td>
+					<td>密码</td>
+					<td>邮箱</td>
+					<td>等级</td>
+					<td>上次登录时间</td>
+					<td>上次退出时间</td>
+					<td>登录总时长</td>
+					<td>操作一</td>
+					<td>操作二</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </body>
 </html>

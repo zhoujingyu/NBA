@@ -177,7 +177,6 @@ function confirmAlterSchedule(button){
 			"schedule_date='"+schedule_date+"',"+
 			"schedule_time='"+schedule_time+"' "+
 			"where schedule_id="+schedule_id+";";
-	console.log(sql);
 	$.ajax({
 		type:'GET',
 		url:"../../php/noReturnQuery.php",

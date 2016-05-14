@@ -32,6 +32,7 @@ function showPlayer(span){
 	$('#container .myCtrl').hide();
 	$('#container #playerCtrl').show();
 	setEwSelect();
+	getPlayer(1);
 }
 //显示数据管理界面
 function showData(span){
@@ -39,6 +40,8 @@ function showData(span){
 	$(span).addClass('selected');
 	$('#container .myCtrl').hide();
 	$('#container #dataCtrl').show();
+	setDataEwSelect();
+	getData(1);
 }
 //显示用户管理界面
 function showUser(span){
@@ -46,4 +49,6 @@ function showUser(span){
 	$(span).addClass('selected');
 	$('#container .myCtrl').hide();
 	$('#container #userCtrl').show();
+	getCountPage();
+	getUser(1);
 }

@@ -1,0 +1,295 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.bgImg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	z-index: -1;
+}
+.container{
+	margin: 10px auto;
+	width: 1200px;
+	min-height: 50px;
+}
+.leftBox{
+	display: inline-block;
+	margin-right: 10px;
+	width: 880px;
+	min-height: 50px;
+	vertical-align: top;
+}
+.rightBox{
+	position: relative;
+	display: inline-block;
+	width: 270px;
+	padding: 10px;
+	min-height: 50px;
+	background-color: rgba(43,43,43,.6);
+	vertical-align: top;
+}
+.topBox{
+	margin-bottom: 10px;
+	padding: 10px;
+	min-height: 50px;
+	background-color: rgba(43,43,43,.6);
+}
+.bottomBox{
+	padding: 10px;
+	min-height: 50px;
+	background-color: rgba(43,43,43,.6);
+}
+.liver_name{
+	padding-bottom: 10px;
+	color: white;
+}
+.borderBottom{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgb(43,43,43);
+}
+.scheduleList{
+	padding: 5px 0;
+}
+.scheduleList p{
+	display: inline-block;
+	padding: 5px 0;
+	width: 50%;
+	color: white;
+}
+.textLeft{
+	text-align: left;
+}
+.textRight{
+	text-align: right;
+}
+.hidden{
+	display: none;
+}
+.exitButton{
+	position: absolute;
+	top: 0;
+	right: -40px;
+	padding: 10px;
+	width: 40px;
+	color: white;
+	font-size: 20px;
+	background-color: rgba(43,43,43,.6);
+	border:none;
+	outline: none;
+}
+.exitButton:hover{
+	color: rgb(43,43,43);
+	background-color: white;
+}
+.sectionP{
+	margin-bottom: 10px;
+	line-height: 36px;
+	color: white;
+}
+.section{
+	padding: 5px 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+.addSection{
+	padding: 5px 5px;
+	border-radius: 5px;
+}
+.section:hover,
+.addSection:hover{
+	cursor: pointer;
+	color: rgb(43,43,43);
+	background-color: white;
+}
+.selected{
+	color: rgb(43,43,43);
+	background-color: white;
+}
+.remain{
+	margin-bottom: 10px;
+	color: white;
+}
+.remainInput{
+	border:none;
+	outline: none;
+	width: 48px;
+	text-align: center;
+	color: white;
+	background-color: rgb(43,43,43);
+}
+.teamPic{
+	margin-bottom: 10px;
+	color: white;
+	height: 5rem;
+}
+.teamPic p{
+	display: inline-block;
+	height: 5rem;
+	line-height: 5rem;
+	vertical-align: top;
+	text-align: center;
+}
+.guestP,
+.homeP{
+	width: 40%;
+}
+.VS{
+	width: 20%;
+	font-size: 36px;
+	font-weight: bold;
+}
+.teamImg{
+	width: 5rem;
+	height: 5rem;
+	vertical-align: top;
+}
+.scoreTable{
+	width: 100%;
+	border-color:white;
+	color: white;
+}
+.scoreTable td{
+	padding: 10px 0;
+	text-align: center;
+}
+.scoreBotton{
+	padding: 0 5px;
+	border:none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	color: white;
+}
+.scoreBotton:hover{
+	cursor: pointer;
+	color: rgb(200,200,200);
+}
+.scoreInput{
+	width: 32px;
+	border:none;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	text-align: center;
+}
+.selector{
+	margin-bottom: 10px;
+	color: white;
+	text-align: center;
+}
+.livingSelector,
+.dataSelector{
+	padding: 5px 48px;
+}
+.livingSelector:hover,
+.dataSelector:hover{
+	cursor: pointer;
+	color: rgb(200,200,200);
+}
+.borderBottom2{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: white;
+}
+.myTable{
+	margin: 10px 0;
+	width: 100%;
+	color: white;
+	border-color: white;
+}
+.myTable td{
+	padding: .5rem 0;
+	text-align: center;
+}
+.wordInput{
+	margin-bottom: 10px;
+	width: 100%;
+	height: 6rem;
+	border:none;
+	outline: none;
+	color: white;
+	font-size: 20px;
+	background-color: rgb(43,43,43);
+}
+.publishButton{
+	margin-bottom: 10px;
+	padding: .5rem 1rem;
+	color: white;
+	background-color: rgb(43,43,43);
+	border:none;
+	outline: none;
+	font-size: 20px;
+}
+.publishButton:hover,
+.deleteButton:hover{
+	cursor: pointer;
+	color: rgb(43,43,43);
+	background-color:white;
+}
+.dataBox{
+	margin-bottom: 10px;
+}
+.dataBox label{
+	color: white;
+}
+.wordP{
+	padding: 10px 0;
+	line-height: 24px;
+	color: white;
+}
+.deleteButton{
+	margin-left: 796px;
+	padding: .5rem 1rem;
+	color: white;
+	background-color: rgb(43,43,43);
+	border:none;
+	outline: none;
+	font-size: 16px;
+}
+.pageBox{
+	padding: 20px 0 10px 0;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+.pageBox span{
+	padding: .5rem 1rem;
+}
+.enabled{
+	color: white;
+	background-color: rgb(43,43,43);
+}
+.enabled:hover{
+	cursor: pointer;
+	background-color: white;
+	color: rgb(43,43,43);
+}
+.disabled{
+	color: rgb(120,120,120);
+	background-color: rgb(23,23,23);
+}
+.currentPage{
+	color: white;
+	background-color: rgb(100,100,100);
+}
+.endButton{
+	padding: .5rem 1rem;
+	color: white;
+	background-color: rgba(43,43,43,.6);
+	border:none;
+	outline: none;
+	font-size: 16px;
+}
+.endButton:hover{
+	cursor: pointer;
+	background-color: rgb(43,43,43);
+}
+.enterLiving:hover{
+	cursor: pointer;
+	color: rgb(200,200,200);
+}
+

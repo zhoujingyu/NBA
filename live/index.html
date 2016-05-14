@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>直播间</title>
+	<link rel="stylesheet" type="text/css" href="css/live.css" />
+	<script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/live.js"></script>
+</head>
+<body>
+	<img src="../resource/images/livingroombg.jpg" class="bgImg">
+	<div class="container">
+		<div class="leftBox">
+			<div class="topBox">
+				<p id="sectionP" class="sectionP" onclick="sectionEvent(event)">
+					<label>当前节:&nbsp;</label>
+					<span id="section1" class="section" section="1">第1节</span>
+					<span id="section2" class="section" section="2">第2节</span>
+					<span id="section3" class="section" section="3">第3节</span>
+					<span id="section4" class="section" section="4">第4节</span>
+					<span id="addSection" class="addSection" lastSection="4">+</span>
+				</p>
+				<p id="remain" class="remain">
+					<label>剩余时间:&nbsp;</label>
+					<input type="text" class="remainInput" id="remainMinute" />
+					<label>分</label>
+					<input type="text" class="remainInput" id="remainSecond" />
+					<label>秒</label>
+				</p>
+				<div id="teamPic" class="teamPic">
+					<p id="guestP" class="guestP">
+						<img src="../resource/images/teamLogo/76ers.png" id="guestImg" class="teamImg">
+					</p><!--
+					--><p class="VS">VS</p><!--
+					--><p id="homeP" class="homeP">
+						<img src="../resource/images/teamLogo/Bucks.png" id="homeImg" class="teamImg">
+					</p>
+				</div>
+				<table class="scoreTable" id="scoreTable" border="1" cellpadding="0" cellspacing="0">
+					<tr class="tableHeader" id="tableHeader">
+						<td>球队</td>
+						<td>第1节</td>
+						<td>第2节</td>
+						<td>第3节</td>
+						<td>第4节</td>
+						<td>总分</td>
+					</tr>
+					<tr id="guestTr">
+						<td id="guest_name">客队</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section1GuestScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section2GuestScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section3GuestScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section4GuestScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td id="countGuestScorce">--</td>
+					</tr>
+					<tr id="homeTr">
+						<td id="home_name">主队</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section1HomeScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section2HomeScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section3HomeScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td>
+							<button type="button" class="scoreBotton">-</button>
+							<input type="text" id="section4HomeScorce" class="scoreInput" onkeypress="return isNum(event)" />
+							<button type="button" class="scoreBotton">+</button>
+						</td>
+						<td id="countHomeScorce">--</td>
+					</tr>
+			</table>
+			</div>
+			<div class="bottomBox">
+				<h1 class="selector">
+					<span id="livingSelector" class="livingSelector borderBottom2" onclick="showLivingBox();">直播</span>
+					<span id="dataSelector" class="dataSelector" onclick="showDataBox();">数据</span>
+				</h1>
+				<div id="livingBox" class="">
+					<textarea id="wordInput" class="wordInput"></textarea>
+					<p style="text-align: right;" class="borderBottom">
+						<button type="button" class="publishButton">发表</button>
+					</p>
+					<div id="wordBox" class="wordBox">
+						<p class="wordP borderBottom">这轮系列赛，热火队失去了两位重要内线（波什和怀特塞德），这
+						就需要外线球员做出更大的贡献。韦德固然是热火的队魂，而且他总能在关键时
+						<br/>
+						<button type="button" class="deleteButton hidden">删除</button>
+						</p>
+						<p class="wordP borderBottom">这轮系列赛，热火队失去了两位重要内线（波什和怀特塞德），这
+						就需要外线球员做出更大的贡献。韦德固然是热火的队魂，而且他总能在关键时
+						<br/>
+						<button type="button" class="deleteButton hidden">删除</button>
+						</p>
+						<p class="wordP borderBottom">这轮系列赛，热火队失去了两位重要内线（波什和怀特塞德），这
+						就需要外线球员做出更大的贡献。韦德固然是热火的队魂，而且他总能在关键时
+						<br/>
+						<button type="button" class="deleteButton hidden">删除</button>
+						</p>
+						<p class="wordP borderBottom">这轮系列赛，热火队失去了两位重要内线（波什和怀特塞德），这
+						就需要外线球员做出更大的贡献。韦德固然是热火的队魂，而且他总能在关键时
+						<br/>
+						<button type="button" class="deleteButton hidden">删除</button>
+						</p>
+					</div>
+					<p id="pageBox" class="pageBox">
+						<span class="disabled">上一页</span>
+						<span class="currentPage">1</span>
+						<span class="enabled">2</span>
+						<span class="enabled">3</span>
+						<span class="enabled">4</span>
+						<span class="enabled">5</span>
+						<span class="enabled">下一页</span>
+					</p>
+				</div>
+				<div id="dataBox" class="dataBox hidden">
+					<label id="guestLabel">客队</label>
+					<table id="guestDataTable" class="myTable" border="1" cellpadding="0" cellspacing="0">
+						<tr class="tableHeader">
+							<td>球员</td>
+							<td>得分</td>
+							<td>助攻</td>
+							<td>篮板</td>
+							<td>抢断</td>
+							<td>盖帽</td>
+							<td>失误</td>
+							<td>3分</td>
+							<td>犯规</td>
+							<td>罚球</td>
+						</tr>
+					</table>
+					<label id="homeLabel">主队</label>
+					<table id="homeDataTable" class="myTable" border="1" cellpadding="0" cellspacing="0">
+						<tr class="tableHeader">
+							<td>球员</td>
+							<td>得分</td>
+							<td>助攻</td>
+							<td>篮板</td>
+							<td>抢断</td>
+							<td>盖帽</td>
+							<td>失误</td>
+							<td>3分</td>
+							<td>犯规</td>
+							<td>罚球</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div><!--
+		 --><div class="rightBox" id="rightBox">
+		 	<button type="button" class="exitButton" id="exitButton">退出</button>
+		 	<h2 id="liver_name" class="liver_name borderBottom">我是小气,我的直播↓</h2>
+		 	<div class="scheduleList borderBottom">
+		 		<p class="name textLeft">骑士VS马刺</p><!--
+		 		--><p class="datetime textRight">2016-09-07,08:00</p><!--
+		 		--><p class="status textLeft">比赛中</p><!--
+		 		--><p class="enterLiving textRight">开启直播</p>
+		 	</div>
+		 </div>
+	</div>
+</body>
+</html>
