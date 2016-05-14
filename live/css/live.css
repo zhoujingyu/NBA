@@ -230,6 +230,12 @@
 	color: rgb(43,43,43);
 	background-color:white;
 }
+.publishButton:focus,
+.deleteButton:focus{
+	cursor: pointer;
+	color: rgb(43,43,43);
+	background-color:white;
+}
 .dataBox{
 	margin-bottom: 10px;
 }
@@ -258,6 +264,7 @@
 }
 .pageBox span{
 	padding: .5rem 1rem;
+	margin-right: 10px;
 }
 .enabled{
 	color: white;
@@ -291,5 +298,10 @@
 .enterLiving:hover{
 	cursor: pointer;
 	color: rgb(200,200,200);
+}
+.livingImg{
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
 }
 
