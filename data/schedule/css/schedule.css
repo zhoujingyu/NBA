@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+	background-color: #ebecef;
+}
+a {text-decoration: none;}
+a:link {color: #9b9ea4;}
+a:visited {color: #9b9ea4;}
+a:hover{color: #9b9ea4;}
+a:active {color: #9b9ea4;}
+.header{
+	position: relative;
+	width: 100%;
+	height: 3rem;
+	background-color: #0971c4;
+}
+.ired{
+	width: 4rem;
+	height: 3rem;
+}
+.NBALogo{
+	position: absolute;
+	left: .75rem;
+	top: .25rem;
+	height: 2.5rem;
+}
+.nav{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 6rem;
+	height: 3rem;
+}
+.dataNav{
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+}
+.dataNav img
+{
+	padding: .2rem .8rem 0;
+	width: 1.4rem;
+	height: 1.6rem;
+	vertical-align: top;
+}
+.dataNav p{
+	margin-top: .2rem;
+	width: 3rem;
+	height: .8rem;
+	line-height: .8rem;
+	text-align: center;
+	font-size: .8rem;
+	color: white;
+	font-weight: bold;
+}
+.hidden{
+	display: none;
+}
+.hiddenNav{
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	padding: .5rem 0;
+	width: 100%;
+	height: 1rem;
+	background-color: #1d2129;
+	color: white;
+	z-index: 999;
+}
+.bottomArrow{
+	position: absolute;
+	top: -9px;
+	right: 1.2rem;
+	border-style: solid;
+	border-width: 5px;
+	border-top-color: rgba(0,0,0,0);
+	border-right-color: rgba(0,0,0,0);
+	border-left-color: rgba(0,0,0,0);
+	border-bottom-color: #1d2129;
+}
+.hiddenNav a{
+	display: inline-block;
+	margin-left: -1px;
+	width: 25%;
+	text-align: center;
+	color: #9b9ea4;
+}
+.borderRight1{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: rgba(155,158,164,.4);
+}
+.scheduleDate{
+	padding: .5rem 1rem;
+}
+.scheduleList .scheduleDetail:not(:nth-last-child(1)){
+	margin-bottom: .3rem;
+}
+.scheduleDetail{
+	height: 5rem;
+	background-color: white;
+}
+.scheduleDetail p{
+	position: relative;
+	display: inline-block;
+	width: 20%;
+	height: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.guestImg,
+.homeImg{
+	padding: .5rem 0;
+	height: 4rem;
+}
+.guestScore,
+.guestName,
+.homeScore,
+.homeName{
+	display: block;
+	width: 100%;
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+.guestScore,
+.homeScore{
+	font-size: 1.6rem;
+	font-weight: 600;
+}
+.guestName,
+.homeName{
+	font-size: 1.1rem;
+	/*font-weight: bold;*/
+}
+.empty{
+	width: 100%;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: white;
+	text-align: center;
+}
+.icon{
+	background-repeat: no-repeat;
+	background-size: 1rem 1rem;
+	background-position: center;
+}
+.icon:after{
+	content: '\3000';
+}
+.calendar{
+	position: absolute;
+	right: 1rem;
+	top: 3.5rem;
+	background-image: url(../../../resource/images/icon-calendar.png);
+	z-index: -1;
+}
