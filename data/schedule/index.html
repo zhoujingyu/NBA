@@ -6,10 +6,16 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>赛程</title>
 	<link rel="stylesheet" type="text/css" href="css/schedule.css" />
+	<link rel="stylesheet" href="../../lib/themes/default.css">
+	<link rel="stylesheet" href="../../lib/themes/default.date.css">
 	<script type="text/javascript" src="../../lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="../../lib/picker.js"></script>
+	<script type="text/javascript" src="../../lib/picker.date.js"></script>
+	<script type="text/javascript" src="../../lib/legacy.js"></script>
 	<script type="text/javascript" src="js/schedule.js"></script>
 </head>
 <body onscroll="loadScheduleOnScroll(event)">
+
 	<div class="header">
 		<img src="../../resource/images/logo-nba-bg.png" class="ired">
 		<img src="../../resource/images/NBALogo.png" class="NBALogo">
@@ -24,15 +30,18 @@
 			</a>
 		</div>
 		<p class="hiddenNav hidden" id="dataSort">
-			<a class="borderRight1" href="../../data/schedule/">赛程</a><!--
-			--><a class="borderRight1">排名</a><!--
-			--><a class="borderRight1">统计</a><!--
-			--><a>球队</a>
+			<a class="borderRight1" href="javascript:">赛程</a><!--
+			--><a class="borderRight1" href="../rank/">排名</a><!--
+			--><a class="borderRight1" href="../statistics/">统计</a><!--
+			--><a href="../team/">球队</a>
 			<i class="bottomArrow"></i>
 		</p>
 	</div>
 	<div id="scheduleBox" class="scheduleBox">
 	</div>
 	<i class="calendar icon"></i>
+	<p class="dateInputP">我
+	<input id="dateInput" class="datepicker picker__input picker__input--active" name="date" type="text" autofocuss="" value="" data-valuee="2014-08-08" readonly="" aria-haspopup="true" aria-expanded="true" aria-readonly="false" aria-owns="input_01_root" onchange="goThisDateSchedule(this.value)" />
+	</p>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>排名</title>
+	<link rel="stylesheet" type="text/css" href="css/rank.css" />
+	<script type="text/javascript" src="../../lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/rank.js"></script>
+</head>
+<body>
+	<div class="header">
+		<img src="../../resource/images/logo-nba-bg.png" class="ired">
+		<img src="../../resource/images/NBALogo.png" class="NBALogo">
+		<div class="nav">
+			<a class="dataNav">
+				<img src="../../resource/images/news.png">
+				<p>咨询</p>
+			</a><!--
+			--><a class="dataNav" onclick="showDataSort()">
+				<img src="../../resource/images/data.png">
+				<p>数据</p>
+			</a>
+		</div>
+		<p class="hiddenNav hidden" id="dataSort">
+			<a class="borderRight1" href="../schedule/">赛程</a><!--
+			--><a class="borderRight1" href="javascript:">排名</a><!--
+			--><a class="borderRight1" href="../statistics/">统计</a><!--
+			--><a href="../team/">球队</a>
+			<i class="bottomArrow"></i>
+		</p>
+	</div>
+	<p class="ewSelect">
+		<span id="wSelect" class="west selected" onclick="showWRank()">西部联盟</span>
+		<span id="eSelect" class="east" onclick="showERank()">东部联盟</span>
+	</p>
+	<div id="wRankBox">
+		<i class="wArrow"></i>
+		<table id="wTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+			<tr class="tableHeader">
+				<td>球队</td>
+				<td>胜</td>
+				<td>负</td>
+				<td>胜率</td>
+				<td>场均差</td>
+			</tr>
+		</table>
+	</div>
+	<div id="eRankBox" class="hidden">
+		<i class="eArrow"></i>
+		<table id="eTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+			<tr class="tableHeader">
+				<td>球队</td>
+				<td>胜</td>
+				<td>负</td>
+				<td>胜率</td>
+				<td>场均差</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

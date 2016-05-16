@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>数据统计</title>
+	<link rel="stylesheet" type="text/css" href="css/statistics.css" />
+	<script type="text/javascript" src="../../lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/statistics.js"></script>
+</head>
+<body>
+	<div class="header">
+		<img src="../../resource/images/logo-nba-bg.png" class="ired">
+		<img src="../../resource/images/NBALogo.png" class="NBALogo">
+		<div class="nav">
+			<a class="dataNav">
+				<img src="../../resource/images/news.png">
+				<p>咨询</p>
+			</a><!--
+			--><a class="dataNav" onclick="showDataSort()">
+				<img src="../../resource/images/data.png">
+				<p>数据</p>
+			</a>
+		</div>
+		<p class="hiddenNav hidden" id="dataSort">
+			<a class="borderRight1" href="../schedule/">赛程</a><!--
+			--><a class="borderRight1" href="../rank/">排名</a><!--
+			--><a class="borderRight1" href="javascript:">统计</a><!--
+			--><a href="../team/">球队</a>
+			<i class="bottomArrow"></i>
+		</p>
+	</div>
+	<div id="sort" class="sort">
+		<p class="selected" data="score">得分</p><!--
+		--><p data="backboard">篮板</p><!--
+		--><p data="assists">助攻</p><!--
+		--><p data="steal">抢断</p><!--
+		--><p data="block">盖帽</p><!--
+		--><p data="error">失误</p><!--
+		--><p data="3point">三分</p><!--
+		--><p data="foul">犯规</p><!--
+		--><p data="free_throw">罚球</p><!--
+		--><p data="played_game">劳模</p>
+	</div>
+	<table id="scoreTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均得分</td>
+			<td>总得分</td>
+		</tr>
+	</table>
+	<table id="backboardTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均篮板</td>
+			<td>总篮板</td>
+		</tr>
+	</table>
+	<table id="assistsTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均助攻</td>
+			<td>总助攻</td>
+		</tr>
+	</table>
+	<table id="stealTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均抢断</td>
+			<td>总抢断</td>
+		</tr>
+	</table>
+	<table id="blockTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均盖帽</td>
+			<td>总盖帽</td>
+		</tr>
+	</table>
+	<table id="errorTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均失误</td>
+			<td>总失误</td>
+		</tr>
+	</table>
+	<table id="3pointTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均三分</td>
+			<td>总三分</td>
+		</tr>
+	</table>
+	<table id="foulTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均犯规</td>
+			<td>总犯规</td>
+		</tr>
+	</table>
+	<table id="free_throwTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>场均罚球</td>
+			<td>总罚球</td>
+		</tr>
+	</table>
+	<table id="played_gameTable" class="myTable" border='0' cellspacing="0" cellpadding="0">
+		<tr class="tableHeader">
+			<td>球员</td>
+			<td>总上场数</td>
+		</tr>
+	</table>
+</body>
+</html>

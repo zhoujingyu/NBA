@@ -94,91 +94,83 @@ a:active {color: #9b9ea4;}
 	border-right-width: 1px;
 	border-right-color: rgba(155,158,164,.4);
 }
-.scheduleDate{
-	padding: .5rem 1rem;
-}
-.scheduleList .scheduleDetail:not(:nth-last-child(1)){
-	margin-bottom: .3rem;
-}
-.scheduleDetail{
-	height: 5rem;
-	background-color: white;
-}
-.scheduleDetail p{
+.ewSelect{
 	position: relative;
-	display: inline-block;
-	width: 20%;
-	height: 5rem;
-	line-height: 5rem;
-	text-align: center;
-	vertical-align: top;
-	white-space: nowrap;
+	margin: .5rem 1rem;
+	height: 1rem;
+	line-height: 1rem;
 }
-.guestImg,
-.homeImg{
-	padding: .5rem 0;
-	height: 4rem;
-}
-.guestScore,
-.guestName,
-.homeScore,
-.homeName{
-	display: block;
-	width: 100%;
-	height: 2.5rem;
-	line-height: 2.5rem;
-}
-.guestScore,
-.homeScore{
-	font-size: 1.6rem;
-	font-weight: 600;
-}
-.guestName,
-.homeName{
-	font-size: 1.1rem;
-	/*font-weight: bold;*/
-}
-.empty{
-	width: 100%;
-	height: 5rem;
-	line-height: 5rem;
-	background-color: white;
-	text-align: center;
-}
-.icon{
-	background-repeat: no-repeat;
-	background-size: 1rem 1rem;
-	background-position: center;
-}
-.icon:after{
-	content: '\3000';
-}
-.calendar{
+.west,
+.east{
 	position: absolute;
-	right: 1rem;
-	top: 3.5rem;
-	background-image: url(../../../resource/images/icon-calendar.png);
-	z-index: -1;
 }
-.dateInputP{
-	position: absolute;
-	right: 1rem;
-	top: 3.5rem;
-	width: 1rem;
-	white-space: nowrap;
-	z-index: 999;
-	color: rgba(0,0,0,0);
-}
-#dateInput{
-	position: absolute;
+.west{
 	left: 0;
-	bottom: 0;
-	width: 1rem;
-	height: 100%;
-	outline: none;
-	border:none;
-	opacity: 0;
-	-moz-opacity: 0;
-	-khtml-opacity: 0;
-	filter:alpha(opacity=0);
+}
+.east{
+	right: 0;
+}
+.selected{
+	color: #0971c4;
+}
+.myTable{
+	width: 100%;
+}
+.myTable td{
+	padding: .5rem 0;
+	border-bottom: 1px solid #efeff4;
+	white-space: nowrap;
+}
+.myTable tr td:first-of-type{
+	width: 30%;
+	padding-left: .5rem;
+	text-align: left;
+}
+.myTable tr td:not(:first-of-type){
+	width: 17.5%;
+	text-align: center;
+}
+.tableHeader{
+	background-color: #dddddd;
+}
+.myTable tr:not(.tableHeader){
+	background-color: white;
+}
+.goodRank{
+	margin-right: .2rem;
+	padding: .05rem .4rem;
+	color: white;
+	background-color: #f3bf2e;
+}
+.badRank{
+	margin-right: .2rem;
+	padding: .05rem .4rem;
+	color: white;
+	background-color: #b3b3b3;
+}
+#wRankBox,
+#eRankBox{
+	position: relative;
+}
+.wArrow{
+	position: absolute;
+	top: -.7rem;
+	left: 2.6rem;
+	border-style: solid;
+	border-width: .4rem;
+	border-top-color: rgba(0,0,0,0);
+	border-right-color: rgba(0,0,0,0);
+	border-left-color: rgba(0,0,0,0);
+	border-bottom-color: #dddddd;
+}
+.eArrow{
+	position: absolute;
+	top: -.7rem;
+	right: 2.6rem;
+	border-style: solid;
+	border-width: .4rem;
+	border-top-color: rgba(0,0,0,0);
+	border-right-color: rgba(0,0,0,0);
+	border-left-color: rgba(0,0,0,0);
+	border-bottom-color: #dddddd;
 }

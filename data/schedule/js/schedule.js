@@ -2,6 +2,13 @@ var gameCount=0;//每次取得赛程的天数
 var lastDate='';//最后加载的日期
 
 $(function(){
+	var $input=$('.datepicker').pickadate({
+		format: 'yyyy-mm-dd',
+		closeOnSelect: false,
+		closeOnClear: false
+	});
+	var picker=$input.pickadate('picker');
+	$('#dateInput').val(getDateString());
 	getSchedule();
 })
 
@@ -19,7 +26,6 @@ function getSchedule(date){
 	if(date == undefined){
 		date=getDateString();
 	}
-	// var nextDate=getNextDate(date,4);
 	var sql="select schedule.*,t1.logo as guest_logo,t2.logo as home_logo "+
  			"from schedule,team as t1,team as t2 "+
  			"where schedule_date='"+date+"' "+
@@ -150,6 +156,13 @@ function loadScheduleOnScroll(e){
 		gameCount=0;
 		getSchedule(getNextDate(lastDate,1));
 	}
+}
+//输入日期，跳到相应的赛程
+function goThisDateSchedule(date){
+	if(date == '')return;
+	gameCount=0;
+	$('#scheduleBox').html('');
+	getSchedule(date);
 }
 
 

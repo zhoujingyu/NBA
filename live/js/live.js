@@ -60,7 +60,7 @@ function getSchedule(){
 			"from schedule "+
 			"where schedule_date>='"+date+"' "+
 			"and liver_id="+liver_id+" "+
-			"order by schedule_date";
+			"order by schedule_date,schedule_time";
 	$.ajax({
 		type:'GET',
 		url:"../../php/hasReturnQuery.php",
@@ -1112,6 +1112,7 @@ function uploadPlayerData(schedule_id,table,$p){
 				console.log('比赛结束，上传球员数据成功');
 				$p.siblings('.status').text('已结束');
 				$p.remove();
+				updateTeamRank(schedule_id,table);
 			}else{
 				console.log('比赛结束，上传球员数据'+data);
 			}
@@ -1121,6 +1122,68 @@ function uploadPlayerData(schedule_id,table,$p){
 		}
 	});
 }
+//比赛结束，更新球队胜负排名
+function updateTeamRank(schedule_id,table){
+	var sql="select * from "+table +" where schedule_id="+schedule_id+";";
+	$.ajax({
+		type:'GET',
+		url:"../../php/hasReturnQuery.php",
+		data:{
+			sql:sql
+		},
+		dataType:'json',
+		success:function(data){
+			console.log(data);
+			if (data != '') {
+				var guestWin=0;
+				var guestLose=0;
+				var homeWin=0;
+				var homeLose=0;
+				if(data[0]['count_guest_score']>data[0]['count_home_score']){
+					guestWin=1;
+					homeLose=1;
+				}else if(data[0]['count_guest_score']<data[0]['count_home_score']){
+					guestLose=1;
+					homeWin=1;
+				}
+				var sqlRank="update rank rg,rank rh "+
+							"set "+
+							"rg.win=rg.win+"+guestWin+","+
+							"rg.lose=rg.lose+"+guestLose+","+
+							"rg.winrate=(rg.win+"+guestWin+")/(rg.win+"+guestWin+"+rg.lose+"+guestLose+"),"+
+							"rh.win=rh.win+"+homeWin+","+
+							"rh.lose=rh.lose+"+homeLose+","+
+							"rh.winrate=(rh.win+"+homeWin+")/(rh.win+"+homeWin+"+rh.lose+"+homeLose+") "+
+							"where rg.team_id="+data[0]['guest_id']+" "+
+							"and rh.team_id="+data[0]['home_id']+";";
+				console.log(sqlRank);
+				$.ajax({
+					type:'GET',
+					url:"../../php/noReturnQuery.php",
+					data:{
+						sql:sqlRank
+					},
+					success:function(data){
+						if (data == 1) {
+							console.log('更新排名成功');
+						}else{
+							console.log('更新排名失败');
+						}
+					},
+					error:function(){
+						console.log('更新排名失败')
+					}
+				});
+			}else{
+				console.log('取得赛事结果失败');
+			}
+		},
+		error:function(){
+			console.log('取得赛事结果失败');
+		}
+	});
+}
+
 //退出直播间
 function exit(){
 	sessionStorage.clear();
